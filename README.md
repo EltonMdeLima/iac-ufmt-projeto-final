@@ -10,6 +10,8 @@
 
 Este projeto demonstra o uso de Infraestrutura como Código (IaC) para provisionar e gerenciar um ambiente completo de execução para uma aplicação estática, utilizando ferramentas como **Docker**, **Docker Compose**, **Terraform**, **Ansible**, **VS Code** e **Nix**.
 
+![Estrutura do Projeto](/doc/Fluxo-IaC.png)
+
 O ambiente pode ser levantado de diferentes formas, garantindo flexibilidade para testes, execução e apresentação do projeto.
 
 ---
