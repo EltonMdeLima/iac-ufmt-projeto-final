@@ -1,78 +1,153 @@
-# Projeto Final - Infraestrutura como Código (IaC) - UFMT 2025
+# 🛠️ Projeto Final - Infraestrutura como Código (IaC)
 
-Este projeto tem como objetivo provisionar e configurar automaticamente a infraestrutura necessária para executar uma aplicação simples em Node.js com banco de dados PostgreSQL, utilizando ferramentas como Terraform e Ansible.
-
-## 📌 Objetivos
-
-- Criar infraestrutura em nuvem pública utilizando **Terraform**
-- Configurar a infraestrutura com **Ansible**
-- Implantar uma aplicação Node.js com banco de dados **PostgreSQL**
-- Executar a aplicação em uma VM provisionada na **Digital Ocean**
-- Documentar todo o processo de desenvolvimento e execução
+**Disciplina:** Infraestrutura como Código - UFMT 2025  
+**Aluno:** Elton  
+**Data de Entrega:** 31/03/2025
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 📌 Descrição Geral
 
-| Tecnologia | Finalidade |
-|------------|------------|
-| Node.js    | Backend da aplicação |
-| PostgreSQL | Banco de dados relacional |
-| Terraform  | Provisionamento da infraestrutura |
-| Ansible    | Configuração da infraestrutura |
-| Digital Ocean | Provedor de nuvem |
-| NixOS ou Ubuntu | Sistema operacional da VM |
-| GitHub     | Versionamento de código |
+Este projeto demonstra o uso de Infraestrutura como Código (IaC) para provisionar e gerenciar um ambiente completo de execução para uma aplicação estática, utilizando ferramentas como **Docker**, **Docker Compose**, **Terraform**, **Ansible**, **VS Code** e **Nix**.
+
+O ambiente pode ser levantado de diferentes formas, garantindo flexibilidade para testes, execução e apresentação do projeto.
 
 ---
 
-## 🧱 Estrutura do Projeto
+## 🧱 Estrutura de Pastas (Mermaid)
+
+```mermaid
+graph TD
+  A[Raiz do Projeto]
+  A --> B[doc/]
+  A --> C[infra/]
+  A --> D[site/]
+  A --> E[start.sh / stop.sh / fix_paths.py / shell.nix]
+  A --> F[README.md]
+
+  C --> C1[ansible/]
+  C --> C2[docker/]
+  C --> C3[terraform-local/]
+
+  C1 --> C1a[inventory]
+  C1 --> C1b[playbook.yml]
+  C1 --> C1c[nginx.conf]
+
+  C2 --> C2a[Dockerfile]
+  C2 --> C2b[docker-compose.yml]
+  C2 --> C2c[nginx.conf]
+  C2 --> C2d[site/]
+
+  C3 --> C3a[main.tf]
+  C3 --> C3b[versions.tf]
+
+  D --> D1[index.html / css/ / js/ / img/ / fonts/]
+
+  B --> B1[documentacao-projeto-final.md]
+```
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### 1. Ativar ambiente com Nix
 
 ```bash
-.
-├── app/                    # Código da aplicação Node.js
-│   └── server.js
-├── infra/
-│   ├── terraform/          # Código para provisionamento na Digital Ocean
-│   └── ansible/            # Playbooks e inventário para configuração
-├── README.md
-└── .env.example            # Variáveis de ambiente (não commitadas)
+nix-shell
+```
 
+> Isso garante que Docker, Ansible, Terraform e demais dependências estejam carregadas no terminal.
 
-#Features
+### 2. Escolher método de execução
 
-- Responsive Layout powered by Bootstrap 3
-- Built with w3 validated HTML5 & CSS3
-- Modern Design
-- Full Screen Header Background
-- Optimized Code & Content
-- Showcase your work more attractively.
-- HiDPI / Retina Ready
-- Clean Code
-- IE 9 support
-- SEO Optimized
-- 100% Fully Customizable
-- Sticky Header
-- Google Fonts
-- Strong focus on Usability and UX
-- FontAwesome Icon Integrated
-- Powered by Google Hosted Library and MaxCDN. 
-- Minified CSS and Js included for Faster loading. 
-- Clean and stylish UI
-- Well commented coding
-- Easy to use
-- It's Free!
+Rode:
+```bash
+./start.sh
+```
+E escolha uma das opções:
 
-#Screenshot
+- `1`: Subir com Docker Compose
+- `2`: Subir com Terraform
+- `3`: Subir com Docker direto
+- `4`: Subir tudo (Compose + Terraform)
 
-![Screenshot of HTML 5]
-(https://raw.githubusercontent.com/technext/Developer/master/Features/html5.png)
+### 3. Acessar a aplicação
 
+Abra no navegador:
+```
+http://localhost:8080
+```
 
-#Demo Link
-Check out the demo of Flusk responsive HTML template at (http://themewagon.com/demo/Developer/)
+### 4. Finalizar o ambiente
 
+```bash
+./stop.sh
+```
+E escolha uma das opções:
 
+- `1`: Parar Docker Compose
+- `2`: Parar Terraform
+- `3`: Parar container direto
+- `4`: Finalizar tudo
 
+---
 
+## 🧩 Ferramentas Utilizadas
+
+| Ferramenta         | Função |
+|--------------------|--------|
+| Docker             | Execução de containers |
+| Docker Compose     | Orquestração dos containers |
+| Terraform          | Provisionamento declarativo |
+| Ansible            | Provisionamento imperativo |
+| VS Code            | IDE com extensões automáticas |
+| Nix / shell.nix    | Ambientes reproduzíveis |
+| Git + GitFlow      | Versionamento de código |
+| PostgreSQL + Redis | Banco e cache (para simulação local) |
+
+---
+
+## 📷 Prints e Evidências
+
+- ✅ Execução com Ansible
+- ✅ Container rodando (Docker)
+- ✅ Site no navegador (`localhost:8080`)
+- ✅ Diagrama da arquitetura (em `doc/img`)
+- ✅ Terminal com ambiente Nix carregado
+
+---
+
+## 📄 Documentação
+
+Arquivo principal: `doc/documentacao-projeto-final.md`
+
+Contém:
+- Objetivo
+- Tecnologias utilizadas
+- Justificativa das escolhas
+- Passo a passo de execução
+- Diagrama da arquitetura
+- Conclusão
+
+---
+
+## 🛠️ Desenvolvedor
+
+**Elton**  
+Residência Tecnológica em DevOps  
+UFMT - 2025
+
+---
+
+## 📬 Entrega
+
+Este projeto será apresentado no dia **31 de Março de 2025** e enviado por:
+
+- Documento PDF ou Google Docs
+- Link do repositório GitHub
+- Email com o assunto:
+
+```
+Projeto Final IaC UFMT 2025
+```
 

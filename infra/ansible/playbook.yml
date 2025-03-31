@@ -1,0 +1,13 @@
+- name: Configurar servidor nginx local
+  hosts: local
+  become: false
+  tasks:
+    - name: Verifica se Docker está instalado
+      command: docker --version
+      register: docker_check
+      failed_when: docker_check.rc != 0
+
+    - name: Subir container com Docker Compose
+      command: docker-compose up --build -d
+      args:
+        chdir: ../docker

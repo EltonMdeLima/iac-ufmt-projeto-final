@@ -1,0 +1,141 @@
+.
+├── doc
+│   └── documentacao-projeto-final.md
+├── estrutura-projeto-DEVELOPER.txt
+├── infra
+│   ├── ansible
+│   │   ├── inventory
+│   │   ├── nginx.conf
+│   │   └── playbook.yml
+│   ├── docker
+│   │   ├── default.conf
+│   │   ├── docker-compose.yml
+│   │   ├── Dockerfile
+│   │   ├── nginx.conf
+│   │   └── site
+│   │       ├── css
+│   │       │   ├── animate.css
+│   │       │   ├── bootstrap.min.css
+│   │       │   ├── font-awesome.min.css
+│   │       │   ├── main.css
+│   │       │   ├── main.min.css
+│   │       │   ├── owl.carousel.css
+│   │       │   └── owl.theme.min.css
+│   │       ├── Developer.png
+│   │       ├── fonts
+│   │       │   ├── font
+│   │       │   │   ├── awesome-webfont.eot
+│   │       │   │   ├── awesome-webfont.svg
+│   │       │   │   ├── awesome-webfont.ttf
+│   │       │   │   ├── awesome-webfont.woff
+│   │       │   │   └── awesome-webfont.woff2
+│   │       │   ├── Font
+│   │       │   │   └── Awesome.otf
+│   │       │   └── pacifico.woff
+│   │       ├── img
+│   │       │   ├── bg
+│   │       │   │   ├── bg-2.jpg
+│   │       │   │   ├── bg-4.jpg
+│   │       │   │   ├── contact-bg.jpg
+│   │       │   │   ├── header-bg.jpg
+│   │       │   │   └── number1.gif
+│   │       │   ├── stock-photo-a-happy-young-woman-and-her-german-shepherd-dog-are-laying-on-the-grass-outside-hugging-vintage-196561466.jpg
+│   │       │   ├── stock-photo-assorted-food-for-iftar-during-ramadan-196438670.jpg
+│   │       │   ├── stock-photo-digitally-generated-large-farge-football-stadium-with-brasilian-fans-197727014.jpg
+│   │       │   ├── stock-photo-dog-relaxing-on-a-fancy-deck-chair-193526546.jpg
+│   │       │   ├── stock-photo-family-lying-on-grass-in-park-together-193994486.jpg
+│   │       │   ├── stock-photo-kiev-ukraine-june-brand-new-apple-iphone-s-with-youtube-app-on-the-screen-lying-on-197254988.jpg
+│   │       │   ├── stock-photo-rio-de-janeiro-brazil-june-messi-at-world-cup-group-f-game-between-argentina-and-198943448.jpg
+│   │       │   ├── stock-vector-flat-modern-design-vector-illustration-concept-of-creative-office-workspace-workplace-icon-195937268.jpg
+│   │       │   ├── testimonial_11-190x190.jpg
+│   │       │   ├── testimonial_22-190x190.jpg
+│   │       │   ├── testimonial_31-190x190.jpg
+│   │       │   ├── work1.jpg
+│   │       │   ├── work2.jpg
+│   │       │   ├── work3.png
+│   │       │   ├── work4.jpg
+│   │       │   ├── work5.jpg
+│   │       │   ├── work6.jpg
+│   │       │   ├── work7.jpg
+│   │       │   └── work8.png
+│   │       ├── index.html
+│   │       ├── js
+│   │       │   ├── bootstrap.min.js
+│   │       │   ├── isotope.pkgd.min.js
+│   │       │   ├── jquery-2.1.3.min.js
+│   │       │   ├── jquery.actual.min.js
+│   │       │   ├── jqueryanimateNumber.min.js
+│   │       │   ├── jquery.isonscreen.js
+│   │       │   ├── jquery.onscreen.min.js
+│   │       │   ├── main.js
+│   │       │   ├── main.min.js
+│   │       │   └── owl.carousel.min.js
+│   │       └── LICENSE
+│   └── terraform-local
+│       ├── main.tf
+│       └── versions.tf
+├── README.md
+├── shell.nix
+├── site
+│   ├── css
+│   │   ├── animate.css
+│   │   ├── bootstrap.min.css
+│   │   ├── font-awesome.min.css
+│   │   ├── main.css
+│   │   ├── main.min.css
+│   │   ├── owl.carousel.css
+│   │   └── owl.theme.min.css
+│   ├── Developer.png
+│   ├── fonts
+│   │   ├── font
+│   │   │   ├── awesome-webfont.eot
+│   │   │   ├── awesome-webfont.svg
+│   │   │   ├── awesome-webfont.ttf
+│   │   │   ├── awesome-webfont.woff
+│   │   │   └── awesome-webfont.woff2
+│   │   ├── Font
+│   │   │   └── Awesome.otf
+│   │   └── pacifico.woff
+│   ├── img
+│   │   ├── bg
+│   │   │   ├── bg-2.jpg
+│   │   │   ├── bg-4.jpg
+│   │   │   ├── contact-bg.jpg
+│   │   │   ├── header-bg.jpg
+│   │   │   └── number1.gif
+│   │   ├── stock-photo-a-happy-young-woman-and-her-german-shepherd-dog-are-laying-on-the-grass-outside-hugging-vintage-196561466.jpg
+│   │   ├── stock-photo-assorted-food-for-iftar-during-ramadan-196438670.jpg
+│   │   ├── stock-photo-digitally-generated-large-farge-football-stadium-with-brasilian-fans-197727014.jpg
+│   │   ├── stock-photo-dog-relaxing-on-a-fancy-deck-chair-193526546.jpg
+│   │   ├── stock-photo-family-lying-on-grass-in-park-together-193994486.jpg
+│   │   ├── stock-photo-kiev-ukraine-june-brand-new-apple-iphone-s-with-youtube-app-on-the-screen-lying-on-197254988.jpg
+│   │   ├── stock-photo-rio-de-janeiro-brazil-june-messi-at-world-cup-group-f-game-between-argentina-and-198943448.jpg
+│   │   ├── stock-vector-flat-modern-design-vector-illustration-concept-of-creative-office-workspace-workplace-icon-195937268.jpg
+│   │   ├── testimonial_11-190x190.jpg
+│   │   ├── testimonial_22-190x190.jpg
+│   │   ├── testimonial_31-190x190.jpg
+│   │   ├── work1.jpg
+│   │   ├── work2.jpg
+│   │   ├── work3.png
+│   │   ├── work4.jpg
+│   │   ├── work5.jpg
+│   │   ├── work6.jpg
+│   │   ├── work7.jpg
+│   │   └── work8.png
+│   ├── index.html
+│   ├── js
+│   │   ├── bootstrap.min.js
+│   │   ├── isotope.pkgd.min.js
+│   │   ├── jquery-2.1.3.min.js
+│   │   ├── jquery.actual.min.js
+│   │   ├── jqueryanimateNumber.min.js
+│   │   ├── jquery.isonscreen.js
+│   │   ├── jquery.onscreen.min.js
+│   │   ├── main.js
+│   │   ├── main.min.js
+│   │   └── owl.carousel.min.js
+│   └── LICENSE
+├── start.sh
+└── stop.sh
+
+22 directories, 117 files

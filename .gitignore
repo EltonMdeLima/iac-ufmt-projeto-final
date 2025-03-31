@@ -1,0 +1,8 @@
+# Arquivos temporários do Docker
+infra/docker/site/
+infra/docker/nginx.conf
+
+# Arquivos Python / Ansible
+*.retry
+__pycache__/
+*.log
